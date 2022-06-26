@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestjs-demo
+  namespace: nestjs-demo
+  labels:
+    app: nestjs-demo
+spec:
+  selector:
+    matchLabels:
+      app: nestjs-demo
+  template:
+    metadata:
+      labels:
+        app: nestjs-demo
+    spec:
+      containers:
+      - name: nestjs-demo
+        image: krajcot/nestjs-demo:latest
+        env:
+        - name: NODE_ENV
+          value: "production"
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+      serviceAccountName: default

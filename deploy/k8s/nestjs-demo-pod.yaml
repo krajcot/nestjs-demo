@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nestjs-demo-pod
+  namespace: nestjs-demo
+  labels:
+    app: nestjs-demo
+    part: frontend
+spec:
+  containers:
+  - name: nestjs-demo
+    image: krajcot/nestjs-demo
+

@@ -1,0 +1,1 @@
+kubectl port-forward -n=nestjs-demo svc/nestjs-demo-svc 8000:8000 --kubeconfig=vultr-config.yaml

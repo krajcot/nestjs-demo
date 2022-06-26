@@ -1,0 +1,1 @@
+kubectl --kubeconfig=vultr-config.yaml -n kubernetes-dashboard create token admin-user
